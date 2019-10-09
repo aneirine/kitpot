@@ -10,8 +10,8 @@
 }
 
 #logo_btn {
-    width: 30px;
-    height: 41px;
+    width: 41px;
+    height: 54px;
     display:block;
     background: transparent url("../img/logo_pink_small.png") no-repeat bottom /*50% 50%*/;
     border: none;
@@ -25,5 +25,28 @@
 
 .navigation {
     background-color: #808085;
+}
+.links {
+    color: white;
+}
+#confirm {
+   /* margin-top: 1em;*/
+    width: 50px;
+    height: 50px;
+    background: transparent url("../img/lapka_pink_small.png") no-repeat 50% 50%;
+    border: none;
+}
 
+a * {
+    color: white;
+}
+.grey {
+    height: 15px;
+    border-radius: 5px 5px 0 0;
+    color: #808085;
+    background-color: #808085;
+}
+
+.card-img-top {
+    height: 450px;
 }
