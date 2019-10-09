@@ -28,7 +28,7 @@
                 <ul class="navbar-nav mr-auto">
 
                     <div class="form-row">
-                        <div class="form-group offset-md-2 ">
+                        <div class="form-group offset-md-1 ">
 
                             <div class="input-group">
 
@@ -59,18 +59,28 @@
                 </#if>
 
 
-                <div class="name-form">
+                <#--<div class="name-form">
                     <div class="navbar-text mr-3">
                         <a class="nav-link links" href="/user/profile"> ${name}</a>
                     </div>
                 </div>
+-->
 
-                <div class="user-image mr-3">
-                    <img src="../public/img/oval.png">
+                <nav class="navbar">
+                    <a class="navbar-brand links" href="/user/profile">
+                         ${name}
+                        <img src="../public/img/oval.png" class="offset-md-2 mr-3">
+
+                    </a>
+                </nav>
+
+                <#-- <div class="user-image mr-3">
+                     <img src="../public/img/oval.png">
+                 </div>-->
+
+                <div class="mr-3">
+                    <@lgn.logout />
                 </div>
-
-                <@lgn.logout />
-
             </div>
 
 
