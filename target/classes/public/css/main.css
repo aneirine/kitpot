@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    height: 100px;
+    background: url("../img/logo_pink_small.png") no-repeat center center;
+    overflow: hidden;
+}
+
+#logo_btn {
+    width: 30px;
+    height: 30px;
+    display:block;
+    background: transparent url("../img/logo_pink_small.png") no-repeat bottom /*50% 50%*/;
+    border: none;
+}
+
+#search_form {
+    margin-top: 1rem;
+
+
+}
+
+.navigation {
+    background-color: #808085;
+    height: 50px;
+}

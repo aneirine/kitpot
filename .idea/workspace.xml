@@ -2,15 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b0fdaa3-194e-4e30-9865-d6dce426a295" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/WelcomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/config/MailConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/config/MvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/RegistrationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/domain/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/domain/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/domain/dto/CaptchaResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/MessageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/MailSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/utils/ControllerUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/utils/Mappings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/img/logo_pink_small.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/public/img/search_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/main.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common_login.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/security.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/userEdit.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/userList.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/WelcomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/WelcomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/greeting.mustache" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,15 +54,88 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sweater@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sweater@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sweater@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sweater: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sweater@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sweater: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sweater@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sweater: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sweater@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sweater: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sweater@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sweater: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="usr: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -38,6 +147,9 @@
   <component name="ProjectId" id="1PBWZ7tC1Z2fPYxbqhF1mj7QImP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql&#10;postgresql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -45,6 +157,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/public/css" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/public/img" />
+      <recent name="$PROJECT_DIR$/src/main/resources/public" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/css" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/public/css" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -63,7 +191,7 @@
       <module name="sweater" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.sweater.*" />
+          <option name="PATTERN" value="com.example.sweater.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,6 +206,16 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -89,7 +227,32 @@
       <option name="presentableId" value="Default" />
       <updated>1565348022428</updated>
       <workItem from="1565348025335" duration="937000" />
-      <workItem from="1565349030447" duration="51000" />
+      <workItem from="1565349030447" duration="501000" />
+      <workItem from="1565427789443" duration="4525000" />
+      <workItem from="1565775693502" duration="9585000" />
+      <workItem from="1565805604522" duration="1050000" />
+      <workItem from="1565806862827" duration="3947000" />
+      <workItem from="1565811870645" duration="725000" />
+      <workItem from="1565878981107" duration="276000" />
+      <workItem from="1565879668474" duration="12682000" />
+      <workItem from="1565894395910" duration="270000" />
+      <workItem from="1565895951842" duration="4438000" />
+      <workItem from="1566220702513" duration="3489000" />
+      <workItem from="1566225085006" duration="764000" />
+      <workItem from="1566226024791" duration="5526000" />
+      <workItem from="1566316856353" duration="5089000" />
+      <workItem from="1566423500623" duration="4056000" />
+      <workItem from="1566495796177" duration="1196000" />
+      <workItem from="1566497016556" duration="301000" />
+      <workItem from="1566497420646" duration="1774000" />
+      <workItem from="1566563329606" duration="5548000" />
+      <workItem from="1569604048584" duration="37000" />
+      <workItem from="1569604114605" duration="139000" />
+      <workItem from="1569604284412" duration="1526000" />
+      <workItem from="1569696331195" duration="560000" />
+      <workItem from="1569844459432" duration="6685000" />
+      <workItem from="1570389149990" duration="9000" />
+      <workItem from="1570627157482" duration="3215000" />
     </task>
     <servers />
   </component>
@@ -108,5 +271,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/sweater$Application.ic" NAME="Application Coverage Results" MODIFIED="1569850599671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.sweater.controller.*</FILTER>
+    </SUITE>
   </component>
 </project>
