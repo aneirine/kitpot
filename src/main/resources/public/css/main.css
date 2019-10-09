@@ -25,5 +25,17 @@
 
 .navigation {
     background-color: #808085;
+}
 
+.links {
+   
+        color: white;
+}
+
+#confirm {
+   /* margin-top: 1em;*/
+    width: 50px;
+    height: 50px;
+    background: transparent url("../img/lapka_pink_small.png") no-repeat 50% 50%;
+    border: none;
 }
