@@ -21,9 +21,8 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.UUID;
 
-
 @Controller
-public class MainController {
+public class AddController {
 
     @Autowired
     private MessageRepository messageRepository;
@@ -32,42 +31,13 @@ public class MainController {
     private String uploadPath;
 
 
-    @GetMapping("/")
-    public String greeting(@AuthenticationPrincipal User user,
-                           Map<String, Object> model) {
-        if (user == null) {
-            return "redirect:/login";
-        } else {
-            model.put("username", user.getUsername());
-            return "redirect:/main";
-        }
+    @GetMapping("add")
+    public String add() {
+        return "add";
     }
 
-
-    @GetMapping("main")
-    public String main(@AuthenticationPrincipal User user,
-            @RequestParam(required = false) String filter,
-                       Model model) {
-
-        if (user == null) {
-            return "redirect:/login";
-        } else {
-            Iterable<Message> messages;
-            if (filter != null && !filter.isEmpty()) {
-                messages = messageRepository.findByTag(filter);
-            } else {
-                messages = getMessages();
-            }
-            model.addAttribute("messages", messages);
-            model.addAttribute("filter", filter);
-            return "main";
-        }
-
-    }
-
-
-   // @PostMapping("add")
-   /* public String add(@AuthenticationPrincipal User user,
+    @PostMapping("add")
+    public String add(@AuthenticationPrincipal User user,
                       @Valid Message message,
                       BindingResult bindingResult,
                       Model model,
@@ -96,38 +66,8 @@ public class MainController {
             messageRepository.save(message);
         }
         model.addAttribute("messages", getMessages());
-        return "add";
-    }*/
-
-
-    @PostMapping("deleteAll")
-    public String deleteAll(Map<String, Object> model) {
-        messageRepository.deleteAll(getMessages());
-        model.put("messages", getMessages());
         return "redirect:/main";
     }
-
-
-    @PostMapping("deleteById")
-    public String delete(@RequestParam Integer id, Map<String, Object> model) {
-        messageRepository.deleteById(id);
-        model.put("messages", getMessages());
-        return "redirect:/main";
-    }
-
-    @PostMapping("showAllMyMessages")
-    public String showAllMyMessages(@AuthenticationPrincipal User user, Map<String, Object> model) {
-        Iterable<Message> messages = messageRepository.findByAuthor(user);
-        model.put("messages", messages);
-        return "main";
-    }
-
-    @PostMapping("showAll")
-    public String showAll(Map<String, Object> model) {
-        model.put("messages", getMessages());
-        return "redirect:/main";
-    }
-
 
     private Iterable<Message> getMessages() {
         return messageRepository.findAll();

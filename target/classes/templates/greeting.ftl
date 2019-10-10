@@ -2,6 +2,7 @@
 
 <#include "parts/navbar.ftl">
 
+
 <@cmn.page>
 
     <div>Hello, ${username}!</div>
