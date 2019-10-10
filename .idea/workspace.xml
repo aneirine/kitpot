@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b0fdaa3-194e-4e30-9865-d6dce426a295" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/AddController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/add.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/img/logo_pink_small.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/img/logo_pink_small.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/img/logo_pink_small.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/img/logo_pink_small.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/greeting.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/greeting.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/main.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/main.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/navbar.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/navbar.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -219,7 +220,9 @@
       <workItem from="1569696331195" duration="560000" />
       <workItem from="1569844459432" duration="6685000" />
       <workItem from="1570389149990" duration="9000" />
-      <workItem from="1570627157482" duration="8230000" />
+      <workItem from="1570627157482" duration="8360000" />
+      <workItem from="1570710360539" duration="406000" />
+      <workItem from="1570710952209" duration="2020000" />
     </task>
     <servers />
   </component>
