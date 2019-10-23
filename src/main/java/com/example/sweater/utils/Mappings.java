@@ -13,7 +13,7 @@ import java.io.InputStream;
 @Controller
 public class Mappings {
 
-    private String commonUrl = "/Users/annasipilova/IdeaProjects/sweater";
+    private String commonUrl = "/Users/annashypilova/IdeaProjects/kitpot";
 
     @GetMapping(value = "/img/{imageUrl}")
     public @ResponseBody
