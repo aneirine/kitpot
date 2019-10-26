@@ -2,7 +2,6 @@ package com.example.sweater.domain;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import sun.management.LazyCompositeData;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;

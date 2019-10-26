@@ -64,11 +64,20 @@
                         <a class="nav-link links" href="/user/profile"> ${name}</a>
                     </div>
                 </div>
+
 -->
+                <nav class="navbar">
+                    <a class="navbar-brand links" href="/myMessages/${currentUserId}">
+                        My messages
+                        <img src="../public/img/oval.png" class="offset-md-2 mr-3">
+
+                    </a>
+                </nav>
+
 
                 <nav class="navbar">
                     <a class="navbar-brand links" href="/user/profile">
-                         ${name}
+                        ${name}
                         <img src="../public/img/oval.png" class="offset-md-2 mr-3">
 
                     </a>

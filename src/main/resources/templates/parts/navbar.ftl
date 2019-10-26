@@ -67,7 +67,7 @@
 
 -->
                 <nav class="navbar">
-                    <a class="navbar-brand links" href="/myMessages/${}">
+                    <a class="navbar-brand links" href="/myMessages/${currentUserId}">
                         My messages
                         <img src="../public/img/oval.png" class="offset-md-2 mr-3">
 
