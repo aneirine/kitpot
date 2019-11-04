@@ -76,7 +76,7 @@
 
 
                 <nav class="navbar">
-                    <a class="navbar-brand links" href="/user/profile">
+                    <a class="navbar-brand links" href="/user/profile/${currentUserId}">
                         ${name}
                         <img src="../public/img/oval.png" class="offset-md-2 mr-3">
 

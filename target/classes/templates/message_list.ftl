@@ -16,6 +16,8 @@
                     <small class="text-muted">  ${message.authorName}</small>
                 </p>
 
+                <a href="/deleteById/${message.id}">Delete</a>
+
 
                <#-- <#include "parts/message_edit.ftl" />-->
             </div>

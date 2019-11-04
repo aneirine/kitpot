@@ -61,8 +61,9 @@ public class UserController {
         return "redirect:/user";
     }
 
-    @GetMapping("profile")
-    public String getProfile(@AuthenticationPrincipal User user,
+    @GetMapping("profile/{user}")
+    public String getProfile(@AuthenticationPrincipal User currentUser,
+                             User user,
                              Model model) {
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());

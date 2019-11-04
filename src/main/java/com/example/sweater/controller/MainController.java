@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -46,7 +47,7 @@ public class MainController {
 
     @GetMapping("main")
     public String main(@AuthenticationPrincipal User user,
-            @RequestParam(required = false) String filter,
+                       @RequestParam(required = false) String filter,
                        Model model) {
 
         if (user == null) {
@@ -66,7 +67,7 @@ public class MainController {
     }
 
 
-   // @PostMapping("add")
+    // @PostMapping("add")
    /* public String add(@AuthenticationPrincipal User user,
                       @Valid Message message,
                       BindingResult bindingResult,
@@ -108,8 +109,8 @@ public class MainController {
     }
 
 
-    @PostMapping("deleteById")
-    public String delete(@RequestParam Integer id, Map<String, Object> model) {
+    @GetMapping("deleteById/{id}")
+    public String delete(@PathVariable Long id, Map<String, Object> model) {
         messageRepository.deleteById(id);
         model.put("messages", getMessages());
         return "redirect:/main";
@@ -132,4 +133,6 @@ public class MainController {
     private Iterable<Message> getMessages() {
         return messageRepository.findAll();
     }
+
+
 }
