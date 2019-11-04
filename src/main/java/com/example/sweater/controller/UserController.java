@@ -67,7 +67,10 @@ public class UserController {
                              Model model) {
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());
-      //  model.addAttribute("photo", user.getUserPhoto()) ;
+
+        model.addAttribute("currentSubscribers", user.getSubscribers().size());
+        model.addAttribute("currentSubscriptions", user.getSubscriptions().size());
+
         return "profile";
     }
 
