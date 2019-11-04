@@ -115,7 +115,6 @@ public class UserController {
     @GetMapping("subscribe/{user}")
     public String subscribe(@AuthenticationPrincipal User currentUser,
                             @PathVariable User user) {
-
         userService.subscribe(currentUser, user);
         return "redirect:/user/profile/" + user.getId();
 
@@ -123,11 +122,22 @@ public class UserController {
 
     @GetMapping("unsubscribe/{user}")
     public String unsubscribe(@AuthenticationPrincipal User currentUser,
-                            @PathVariable User user) {
-
+                              @PathVariable User user) {
         userService.unsubscribe(currentUser, user);
         return "redirect:/user/profile/" + user.getId();
 
+    }
+
+    @GetMapping("{type}/{user}/list")
+    public String userList(@PathVariable User user,
+                           @PathVariable String type,
+                           Model model) {
+            model.addAttribute("type", type);
+            model.addAttribute("userChannel", user);
+            model.addAttribute("users",
+                    type.equals("subscriptions") ? user.getSubscriptions() : user.getSubscribers());
+
+            return "subscriptions";
     }
 
 

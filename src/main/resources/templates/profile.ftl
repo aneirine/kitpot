@@ -15,8 +15,8 @@
         </#if>
     </#if>
 
-    <h3>Subscribers: ${currentSubscribers}</h3>
-    <h3>Subscriptions: ${currentSubscriptions}</h3>
+    <h3>Subscribers: <a href="/user/subscribers/${id}/list"> ${currentSubscribers}</a></h3>
+    <h3>Subscriptions:<a href="/user/subscriptions/${id}/list"> ${currentSubscriptions}</a></h3>
 
 
 </@cmn.page>
