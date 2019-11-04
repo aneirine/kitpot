@@ -66,13 +66,13 @@
                 </div>
 
 -->
-                <nav class="navbar">
+                <#--<nav class="navbar">
                     <a class="navbar-brand links" href="/myMessages/${currentUserId}">
                         My messages
                         <img src="../public/img/oval.png" class="offset-md-2 mr-3">
 
                     </a>
-                </nav>
+                </nav>-->
 
 
                 <nav class="navbar">
