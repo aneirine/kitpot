@@ -25,8 +25,6 @@ public class UserController {
     private UserRepository userRepository;
 
 
-
-
     @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping
     public String userList(Model model) {
@@ -71,6 +69,8 @@ public class UserController {
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());
 
+        model.addAttribute("id", user.getId());
+
         model.addAttribute("currentSubscribers", user.getSubscribers().size());
         model.addAttribute("currentSubscriptions", user.getSubscriptions().size());
 
@@ -80,28 +80,55 @@ public class UserController {
     }
 
     @GetMapping("profile/name/{username}")
-    public String getProfileByUsername(@PathVariable String username){
-      User user = userRepository.findByUsername(username);
-      return "redirect:/user/profile/" + user.getId();
+    public String getProfileByUsername(@PathVariable String username) {
+        User user = userRepository.findByUsername(username);
+        return "redirect:/user/profile/" + user.getId();
     }
 
     @GetMapping("profileEdit")
     public String getProfileEdit(@AuthenticationPrincipal User user,
-                                 Model model){
+                                 Model model) {
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());
         return "profileEdit";
 
     }
 
-    @PostMapping("profile")
+    @PostMapping("profileEdit")
     public String updateProfile(@AuthenticationPrincipal User user,
                                 @RequestParam String password,
                                 @RequestParam String email) {
 
-        userService.updateProfile(user, password, email);
-        return "redirect:/user/profile";
+        try {
+            userService.updateProfile(user, password, email);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "redirect:/user/profileEdit";
 
     }
+
+
+    //Subscribers and subscriptions
+
+
+    @GetMapping("subscribe/{user}")
+    public String subscribe(@AuthenticationPrincipal User currentUser,
+                            @PathVariable User user) {
+
+        userService.subscribe(currentUser, user);
+        return "redirect:/user/profile/" + user.getId();
+
+    }
+
+    @GetMapping("unsubscribe/{user}")
+    public String unsubscribe(@AuthenticationPrincipal User currentUser,
+                            @PathVariable User user) {
+
+        userService.unsubscribe(currentUser, user);
+        return "redirect:/user/profile/" + user.getId();
+
+    }
+
 
 }

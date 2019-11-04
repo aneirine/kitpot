@@ -9,9 +9,9 @@
 
     <#if !isCurrentUser>
         <#if isSubscriber>
-            <a class="btn btn-info" href="/user/unsubscribe">Unsubscribe</a>
+            <a class="btn btn-info" href="/user/unsubscribe/${id}">Unsubscribe</a>
         <#else>
-            <a class="btn btn-info" href="user/subscribe">Subscribe</a>
+            <a class="btn btn-info" href="/user/subscribe/${id}">Subscribe</a>
         </#if>
     </#if>
 
