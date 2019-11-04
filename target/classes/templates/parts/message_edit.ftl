@@ -1,4 +1,4 @@
-<#macro edit>
+
     <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
        aria-controls="collapseExample">
         Message
@@ -32,4 +32,3 @@
             <button type="submit" class="btn btn-primary">Save</button>
         </form>
     </div>
-</#macro>

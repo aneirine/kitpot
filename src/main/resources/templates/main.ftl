@@ -24,7 +24,6 @@
 
         </div>
 
-        <#include "parts/message_edit.ftl" />
 
         <div class="col-md-8">
 
