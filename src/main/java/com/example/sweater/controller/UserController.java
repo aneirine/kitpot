@@ -3,6 +3,7 @@ package com.example.sweater.controller;
 import com.example.sweater.domain.Role;
 import com.example.sweater.domain.User;
 import com.example.sweater.repository.MessageRepository;
+import com.example.sweater.repository.UserRepository;
 import com.example.sweater.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -21,7 +22,9 @@ public class UserController {
     private UserService userService;
 
     @Autowired
-    private MessageRepository messageRepository;
+    private UserRepository userRepository;
+
+
 
 
     @PreAuthorize("hasAuthority('ADMIN')")
@@ -63,7 +66,7 @@ public class UserController {
 
     @GetMapping("profile/{user}")
     public String getProfile(@AuthenticationPrincipal User currentUser,
-                             User user,
+                             @PathVariable User user,
                              Model model) {
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());
@@ -71,7 +74,15 @@ public class UserController {
         model.addAttribute("currentSubscribers", user.getSubscribers().size());
         model.addAttribute("currentSubscriptions", user.getSubscriptions().size());
 
+        model.addAttribute("isCurrentUser", currentUser.equals(user));
+        model.addAttribute("isSubscriber", user.getSubscribers().contains(currentUser));
         return "profile";
+    }
+
+    @GetMapping("profile/name/{username}")
+    public String getProfileByUsername(@PathVariable String username){
+      User user = userRepository.findByUsername(username);
+      return "redirect:/user/profile/" + user.getId();
     }
 
     @GetMapping("profileEdit")

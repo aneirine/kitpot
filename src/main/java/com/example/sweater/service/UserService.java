@@ -40,6 +40,7 @@ public class UserService implements UserDetailsService {
         return user;
     }
 
+
     public boolean addUser(User user) {
         User userFromDb = repository.findByUsername(user.getUsername());
 

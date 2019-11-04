@@ -1,9 +1,19 @@
 <#import "parts/common.ftl" as cmn>
 <#include "parts/navbar.ftl">
 <@cmn.page>
-<h3>${username}</h3>
+    <h3>${username}</h3>
 
-    <a href="/user/profileEdit">Edit profile</a>
+    <#if isCurrentUser>
+        <a href="/user/profileEdit">Edit profile</a>
+    </#if>
+
+    <#if !isCurrentUser>
+        <#if isSubscriber>
+            <a class="btn btn-info" href="/user/unsubscribe">Unsubscribe</a>
+        <#else>
+            <a class="btn btn-info" href="user/subscribe">Subscribe</a>
+        </#if>
+    </#if>
 
     <h3>Subscribers: ${currentSubscribers}</h3>
     <h3>Subscriptions: ${currentSubscriptions}</h3>
