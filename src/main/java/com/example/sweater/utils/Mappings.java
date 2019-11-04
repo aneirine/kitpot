@@ -27,19 +27,15 @@ public class Mappings {
 
     @RequestMapping(method = GET,
             value = {"{path}/public/{directoryName}/{fileName}",
-                    "public/{directoryName}/{fileName}"})
+                    "public/{directoryName}/{fileName}",
+                    "{path}/{type}/public/{directoryName}/{fileName}"}
+            //http://localhost:8080/user/subscriptions/public/img/logo_pink_small.png}
+    )
     public @ResponseBody
     byte[] style(@PathVariable(name = "fileName") String fileName,
                  @PathVariable(name = "directoryName") String directory) throws IOException {
         return returnFile(commonUrl + "/src/main/resources/public/" + directory + "/" + fileName);
     }
-
-    /*@GetMapping(value = "/user/public/{directoryName}/{fileName}")
-    public @ResponseBody
-    byte[] styleUser(@PathVariable(name = "fileName") String fileName,
-                 @PathVariable(name = "directoryName") String directory) throws IOException {
-        return returnFile(commonUrl + "/src/main/resources/public/" + directory + "/" + fileName);
-    }*/
 
 
     private byte[] returnFile(String url) throws IOException {

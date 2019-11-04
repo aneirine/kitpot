@@ -2,39 +2,21 @@
 <#include "parts/navbar.ftl">
 <@cmn.page>
     <h3>${username}</h3>
-${message?ifExists}
 
-    <form method="post" xmlns="http://www.w3.org/1999/html">
+    <#if isCurrentUser>
+        <a href="/user/profileEdit">Edit profile</a>
+    </#if>
 
+    <#if !isCurrentUser>
+        <#if isSubscriber>
+            <a class="btn btn-info" href="/user/unsubscribe/${id}">Unsubscribe</a>
+        <#else>
+            <a class="btn btn-info" href="/user/subscribe/${id}">Subscribe</a>
+        </#if>
+    </#if>
 
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label"> Password: </label>
-            <div class="col-sm-6">
-                <input type="password" name="password" class="form-control"
-                       placeholder="Password"/>
-            </div>
-        </div>
-
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label"> Mail: </label>
-                <div class="col-sm-6">
-                    <input type="email" name="email" class="form-control"
-                           placeholder="Email" value="${email!''}"/>
-                </div>
-            </div>
+    <h3>Subscribers: <a href="/user/subscribers/${id}/list"> ${currentSubscribers}</a></h3>
+    <h3>Subscriptions:<a href="/user/subscriptions/${id}/list"> ${currentSubscriptions}</a></h3>
 
 
-        <div class="form-group">
-            <div class="custom-file">
-                <input type="file" name="file" id="customFile">
-                <label class="custom-file-label" for="customFile">Choose File</label>
-            </div>
-        </div>
-
-
-        <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-
-        <button class="btn btn-primary" type="submit">Save</button>
-        <br/><br/>
-    </form>
 </@cmn.page>

@@ -40,6 +40,7 @@ public class MainController {
             return "redirect:/login";
         } else {
             model.put("username", user.getUsername());
+
             return "redirect:/main";
         }
     }

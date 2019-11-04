@@ -3,6 +3,7 @@ package com.example.sweater.controller;
 import com.example.sweater.domain.Role;
 import com.example.sweater.domain.User;
 import com.example.sweater.repository.MessageRepository;
+import com.example.sweater.repository.UserRepository;
 import com.example.sweater.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -21,7 +22,7 @@ public class UserController {
     private UserService userService;
 
     @Autowired
-    private MessageRepository messageRepository;
+    private UserRepository userRepository;
 
 
     @PreAuthorize("hasAuthority('ADMIN')")
@@ -63,22 +64,81 @@ public class UserController {
 
     @GetMapping("profile/{user}")
     public String getProfile(@AuthenticationPrincipal User currentUser,
-                             User user,
+                             @PathVariable User user,
                              Model model) {
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());
-      //  model.addAttribute("photo", user.getUserPhoto()) ;
+
+        model.addAttribute("id", user.getId());
+
+        model.addAttribute("currentSubscribers", user.getSubscribers().size());
+        model.addAttribute("currentSubscriptions", user.getSubscriptions().size());
+
+        model.addAttribute("isCurrentUser", currentUser.equals(user));
+        model.addAttribute("isSubscriber", user.getSubscribers().contains(currentUser));
         return "profile";
     }
 
-    @PostMapping("profile")
+    @GetMapping("profile/name/{username}")
+    public String getProfileByUsername(@PathVariable String username) {
+        User user = userRepository.findByUsername(username);
+        return "redirect:/user/profile/" + user.getId();
+    }
+
+    @GetMapping("profileEdit")
+    public String getProfileEdit(@AuthenticationPrincipal User user,
+                                 Model model) {
+        model.addAttribute("username", user.getUsername());
+        model.addAttribute("email", user.getEmail());
+        return "profileEdit";
+
+    }
+
+    @PostMapping("profileEdit")
     public String updateProfile(@AuthenticationPrincipal User user,
                                 @RequestParam String password,
                                 @RequestParam String email) {
 
-        userService.updateProfile(user, password, email);
-        return "redirect:/user/profile";
+        try {
+            userService.updateProfile(user, password, email);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "redirect:/user/profileEdit";
 
     }
+
+
+    //Subscribers and subscriptions
+
+
+    @GetMapping("subscribe/{user}")
+    public String subscribe(@AuthenticationPrincipal User currentUser,
+                            @PathVariable User user) {
+        userService.subscribe(currentUser, user);
+        return "redirect:/user/profile/" + user.getId();
+
+    }
+
+    @GetMapping("unsubscribe/{user}")
+    public String unsubscribe(@AuthenticationPrincipal User currentUser,
+                              @PathVariable User user) {
+        userService.unsubscribe(currentUser, user);
+        return "redirect:/user/profile/" + user.getId();
+
+    }
+
+    @GetMapping("{type}/{user}/list")
+    public String userList(@PathVariable User user,
+                           @PathVariable String type,
+                           Model model) {
+            model.addAttribute("type", type);
+            model.addAttribute("userChannel", user);
+            model.addAttribute("users",
+                    type.equals("subscriptions") ? user.getSubscriptions() : user.getSubscribers());
+
+            return "subscriptions";
+    }
+
 
 }

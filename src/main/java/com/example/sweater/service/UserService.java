@@ -40,6 +40,7 @@ public class UserService implements UserDetailsService {
         return user;
     }
 
+
     public boolean addUser(User user) {
         User userFromDb = repository.findByUsername(user.getUsername());
 
@@ -132,5 +133,15 @@ public class UserService implements UserDetailsService {
             sendMessage(user);
         }
 
+    }
+
+    public void subscribe(User currentUser, User user) {
+        user.getSubscribers().add(currentUser);
+        repository.save(user);
+    }
+
+    public void unsubscribe(User currentUser, User user) {
+        user.getSubscribers().remove(currentUser);
+        repository.save(user);
     }
 }
