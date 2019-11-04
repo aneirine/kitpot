@@ -71,6 +71,15 @@ public class UserController {
         return "profile";
     }
 
+    @GetMapping("profileEdit")
+    public String getProfileEdit(@AuthenticationPrincipal User user,
+                                 Model model){
+        model.addAttribute("username", user.getUsername());
+        model.addAttribute("email", user.getEmail());
+        return "profileEdit";
+
+    }
+
     @PostMapping("profile")
     public String updateProfile(@AuthenticationPrincipal User user,
                                 @RequestParam String password,
