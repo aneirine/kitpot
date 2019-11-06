@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8b0fdaa3-194e-4e30-9865-d6dce426a295" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/add.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/add.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/add_part.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/add_part.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profileEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profileEdit.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -230,6 +234,8 @@
       <workItem from="1571847342442" duration="1885000" />
       <workItem from="1572088183274" duration="1029000" />
       <workItem from="1572894786766" duration="5881000" />
+      <workItem from="1573040425935" duration="42000" />
+      <workItem from="1573058232999" duration="2312000" />
     </task>
     <servers />
   </component>
