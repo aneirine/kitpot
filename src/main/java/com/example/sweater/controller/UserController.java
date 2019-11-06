@@ -90,6 +90,8 @@ public class UserController {
                                  Model model) {
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());
+        model.addAttribute("image_url", "logo_pink_small.png");
+        //public/img/
         return "profileEdit";
 
     }

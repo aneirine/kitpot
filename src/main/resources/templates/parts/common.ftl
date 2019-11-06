@@ -15,9 +15,15 @@
               crossorigin="anonymous">
         <script src="https://www.google.com/recaptcha/api.js"></script>
 
-    </head>
-    <body>
+        <#-- cropping an image -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.6/cropper.min.js"></script>
 
+    </head>
+
+
+    <body>
 
 
     <div class="container mt-5">
