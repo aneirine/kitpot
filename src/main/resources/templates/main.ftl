@@ -19,13 +19,8 @@
                     </button>
 
                 </form>
-
             </ul>
-
         </div>
-
-
-
 
             <#include "message_list.ftl" />
 
@@ -40,6 +35,11 @@
                 <form action="/showAll" method="post" class="form-inline">
                     <input type="hidden" name="_csrf" value="${_csrf.token}"/>
                     <button type="submit" class="list-group-item list-group-item-action">Show All</button>
+                </form>
+
+                <form action="/showAllMyMessages" method="post" class="form-inline">
+                    <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+                    <button type="submit" class="list-group-item list-group-item-action">Show All Mine</button>
                 </form>
 
                 <li class="list-group-item">

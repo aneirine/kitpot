@@ -50,17 +50,12 @@ public class MainController {
                        Model model,
                        @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable) {
 
-        if (user == null) {
-            return "redirect:/login";
-        } else {
+        if (user == null) return "redirect:/login";
+        else {
             Page<Message> page;
             boolean condition = filter != null && !filter.isEmpty();
             page = condition ? messageRepository.findByTag(filter, pageable) : getMessages(pageable);
-            /*if () {
-                messages = messageRepository.findByTag(filter);
-            } else {
-                messages = getMessages();
-            }*/
+
             model.addAttribute("page", page);
             model.addAttribute("url", "/main");
             model.addAttribute("filter", filter);
@@ -90,10 +85,12 @@ public class MainController {
 
     @PostMapping("showAllMyMessages")
     public String showAllMyMessages(@AuthenticationPrincipal User user,
-                                    Map<String, Object> model
-                                    /*@PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable*/) {
-        Iterable<Message> messages = messageRepository.findByAuthor(user);
-        model.put("messages", messages);
+                                    Map<String, Object> model,
+                                    @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable) {
+        Page<Message> page = messageRepository.findByAuthor(user, pageable);
+        model.put("url", "/showAllMyMessages");
+        model.put("page", page);
+
         return "main";
     }
 
