@@ -27,20 +27,28 @@
         </div>
 
 
-        <#--<div class="form-group">
-            <div class="custom-file">
-                <input type="file" name="file" id="customFile">
-                <label class="custom-file-label" for="customFile">Choose File</label>
-            </div>
-        </div>-->
-
         <input type="file" name="image" id="image" onchange="readURL(this);"/>
         <div class="image_container">
-            <img id="blah" src="#" alt="your image"/>
+            <#if image_url??>
+                <img id="blah" class="card-img" src="/img/${image_url}" style="width:250px; height:250px;">
+            <#else>  <img id="blah" class="card-img" src="/img/lapka.png">
+            </#if>
+
+        </div>
+
+        <button id="crop_button" type="button">Crop</button>
+
+        <div class="cropped_result">
+            <img src="" id="cropped_image">
         </div>
 
         <script type="text/javascript" defer>
+            var cropper;
+
             function readURL(input) {
+                if (cropper != null) {
+                    cropper.destroy();
+                }
                 if (input.files && input.files[0]) {
                     var reader = new FileReader();
                     reader.onload = function (e) {
@@ -53,7 +61,7 @@
 
             function initCropper() {
                 var image = document.getElementById('blah');
-                var cropper = new Cropper(image, {
+                cropper = new Cropper(image, {
                     aspectRatio: 1 / 1,
                     crop: function (e) {
                         console.log(e.detail.x);
@@ -61,11 +69,24 @@
                     }
                 });
 
+                document.getElementById('crop_button').addEventListener('click', function () {
+                    /* var cropped_image = document.getElementById('cropped_image');
+
+                     cropped_image.src = */
+                   // readURL(cropper.getCroppedCanvas().toDataURL());
+
+
+                    var blah = document.getElementById('blah');
+                    blah.src = cropper.getCroppedCanvas().toDataURL();
+                    if (cropper != null) {
+                        cropper.destroy();
+                    }
+                });
+
             }
         </script>
 
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-
         <button class="btn btn-primary" type="submit">Save</button>
         <br/><br/>
     </form>

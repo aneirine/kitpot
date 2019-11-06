@@ -4,6 +4,4 @@
 
 <@cmn.page>
     <@add.add />
-
-
 </@cmn.page>
