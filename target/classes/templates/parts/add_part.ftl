@@ -1,11 +1,8 @@
 <#macro add>
 
-    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-       aria-controls="collapseExample">
-        Add new message
-    </a>
 
-<div class="collapse <#if message??>show</#if>" id="collapseExample">
+    <h3> Add new message</h3>
+
     <div class="form-group">
 
         <form method="post" enctype="multipart/form-data" class="mt-2">
