@@ -13,6 +13,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.awt.print.Pageable;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -40,14 +41,9 @@ public class UserService implements UserDetailsService {
         return user;
     }
 
-
     public boolean addUser(User user) {
         User userFromDb = repository.findByUsername(user.getUsername());
-
-
-        if (userFromDb != null) {
-            return false;
-        }
+        if (userFromDb != null) return false;
 
         user.setActive(true);
         user.setRoles(Collections.singleton(Role.USER));

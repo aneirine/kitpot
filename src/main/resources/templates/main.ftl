@@ -25,11 +25,11 @@
         </div>
 
 
-        <div class="col-md-8">
+
 
             <#include "message_list.ftl" />
 
-        </div>
+
 
 
         <div class="col-md-2">

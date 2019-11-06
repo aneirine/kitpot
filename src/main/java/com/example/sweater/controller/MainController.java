@@ -6,6 +6,7 @@ import com.example.sweater.repository.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.awt.print.Pageable;
+
 import java.util.Map;
 
 
@@ -60,7 +61,8 @@ public class MainController {
             } else {
                 messages = getMessages();
             }*/
-            model.addAttribute("messages", page);
+            model.addAttribute("page", page);
+            model.addAttribute("url", "/main");
             model.addAttribute("filter", filter);
             return "main";
         }
@@ -88,9 +90,9 @@ public class MainController {
 
     @PostMapping("showAllMyMessages")
     public String showAllMyMessages(@AuthenticationPrincipal User user,
-                                    Map<String, Object> model,
-                                    @PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable) {
-        Iterable<Message> messages = messageRepository.findByAuthor(user, pageable);
+                                    Map<String, Object> model
+                                    /*@PageableDefault(sort = {"id"}, direction = Sort.Direction.DESC) Pageable pageable*/) {
+        Iterable<Message> messages = messageRepository.findByAuthor(user);
         model.put("messages", messages);
         return "main";
     }
