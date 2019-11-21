@@ -1,41 +1,43 @@
 <#import "parts/pager.ftl" as pager>
 
-<@pager.pager url page />
-    <div class="col-md-8">
-        <#list page.content as message>
 
-            <div class="card mb-3">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <#if message.filename??>
-                            <img class="card-img" src="/img/${message.filename}">
-                        </#if>
-                    </div>
+<div class="col-md-8">
+    <@pager.pager url page />
+    <#list page.content as message>
 
-                    <div class="card-body">
-                        <span class="card-title">${message.text}</span>
-                        <i class="card-text">${message.tag}</i>
-                        <p class="card-text">${message.id}</p>
+        <div class="card mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <#if message.filename??>
+                        <img class="card-img" src="/img/${message.filename}">
+                    </#if>
+                </div>
 
-                        <p class="card-text">
-                            <small class="text-muted">
+                <div class="card-body">
+                    <span class="card-title">${message.text}</span>
+                    <i class="card-text">${message.tag}</i>
+                    <p class="card-text">${message.id}</p>
 
-                                <a href="/user/profile/name/${message.authorName}">
-                                    ${message.authorName}</a>
-                            </small>
-                        </p>
+                    <p class="card-text">
+                        <small class="text-muted">
 
-
-                        <a href="/deleteById/${message.id}">Delete</a>
+                            <a href="/user/profile/name/${message.authorName}">
+                                ${message.authorName}</a>
+                        </small>
+                    </p>
 
 
-                        <#-- <#include "parts/message_edit.ftl" />-->
-                    </div>
+                    <a href="/deleteById/${message.id}">Delete</a>
+
+
+                    <#-- <#include "parts/message_edit.ftl" />-->
                 </div>
             </div>
-        <#else >
-            No messages
+        </div>
+    <#else >
+        No messages
 
-        </#list>
-    </div>
-<@pager.pager url page />
+    </#list>
+
+    <@pager.pager url page />
+</div>
