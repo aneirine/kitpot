@@ -1,7 +1,8 @@
 <#import "parts/pager.ftl" as pager>
 
-<@pager.pager url page />
+
     <div class="col-md-8">
+        <@pager.pager url page />
         <#list page.content as message>
 
             <div class="card mb-3">
@@ -37,5 +38,6 @@
             No messages
 
         </#list>
+
+        <@pager.pager url page />
     </div>
-<@pager.pager url page />
