@@ -2,55 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b0fdaa3-194e-4e30-9865-d6dce426a295" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/uploads/logo_pink_small.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profileEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profileEdit.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/userMessages.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/userMessages.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/profileEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/profileEdit.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/userMessages.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/userMessages.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/05758de9-85cb-4e9d-805a-3c407f67e386.190508160346-most-beautiful-places-in-austria---hallstatt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/0a2155e9-9e66-4d16-a4a3-d79056cb50e7.190508160346-most-beautiful-places-in-austria---hallstatt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/0b2eaeaf-242a-4c2c-bfd1-0142e7489f31.image.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/1b1c5ddf-9faa-4389-a900-2c717434f231.Cat03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/1c5f2236-eb54-4d59-973b-67c2afbb31aa.docker commands.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/1f5c9b77-2592-425e-90f8-e82030e21130.image.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/22eb132f-7562-4741-bc23-50bc52aa665b.kik.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/2baac021-e8f9-46c5-8248-b7150cedae57.3bvvjaupCqA.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/38533786-cddd-4561-98c6-a2a83cf7d634.image.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/399c40fb-b47e-419e-aecc-6ab69289b4fe.17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/3e800e62-6650-42d5-8018-adecf0bf9132.190508160346-most-beautiful-places-in-austria---hallstatt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/409ea3a2-8a31-4daa-9c6f-bd960dc3d708.apple-mak-kompiuter-kompiuternyi-stol-displen-klaviatura-mak-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/534bf41a-9e5e-4feb-90ea-5e4bc5d60a3a.butterfly-2049567_1280.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/589c8e92-842f-4990-9ae1-74e061fd44c0.kik.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/5d7c4268-32c2-4a72-bb67-90228e21a102.Cat03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/6217f8b3-616a-4d8e-a747-2db4465c5d2c.9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/691f687d-8089-4bc8-9faf-18d415eb222a.Cat03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/853ac73f-e0ad-4492-b704-26526af233ad.190508160346-most-beautiful-places-in-austria---hallstatt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/8eb3b3c6-25a0-42f6-bc07-44ee7e20d8bb.photo-1496483648148-47c686dc86a8.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/93609596-d66a-4366-ac4c-66b24cabd8bc.butterfly-2049567_1280.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/a0f588a3-69bb-48f6-889c-83a36678e2f3.190508160346-most-beautiful-places-in-austria---hallstatt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/aa1228fc-7a09-4501-9f3c-d6f03346308c.190508160346-most-beautiful-places-in-austria---hallstatt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/ac92f5d6-0e79-46c7-948b-ac5361fadef0.Cat03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/ac991fa7-f7c4-4699-8494-5ebc2c851713.Cat03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/ae5659db-bd5a-4965-8c29-27ac15068fcd.butterfly-2049567_1280.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/b3fc4cc2-214a-414a-8fd9-c83e344fc6e1.Cat03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/b8d98fb3-9b4d-4143-8379-c4d187753968.8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/bc51a3fe-ab18-4330-a6bd-4ecb5267dcba.butterfly-2049567_1280.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/bfa0552e-2925-4ca5-b456-c14fe8839adf.butterfly-2049567_1280.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/c34c53e1-f500-442b-954b-0130bcc754e9.12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/cdbfe6a6-6eff-4779-a7a3-1eca495ab88a.14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/d74bf4fb-2bee-460d-8163-f45f43dfd994.190508160346-most-beautiful-places-in-austria---hallstatt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/d8bf70ce-c867-4100-a6db-3761fd52fa18._7688-517.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/df06bf9a-b36e-432f-add8-804bafdb6c8f.image.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/df2c17f8-bbeb-4832-b44b-5c930720eaba.docker commands.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/e5d81022-cdd7-4b31-88e0-7f1c6978c25e.EFESxhD79TY.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/e777e96d-e832-47e0-aa73-302743f621ad.Cat03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/e80f3b80-ba6e-4e80-b8e4-ac566124efaf.Cat03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/ea5cea8a-d1ba-4475-a790-9d6c57b882bf.butterfly-2049567_1280.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/f00e247f-1028-4e92-99fd-ecadf848e5bc.Felis_silvestris_silvestris_small_gradual_decrease_of_quality.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/f4c71f6d-4c08-4853-8371-518b6f0c442d.m.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -2,10 +2,16 @@
 <#include "parts/navbar.ftl">
 <@cmn.page>
     <h3>${username}</h3>
+    <#if user.filename>
+        <img src="/img/${user.filename}">
+    </#if>
+
 
     <#if isCurrentUser>
         <a href="/user/profileEdit">Edit profile</a>
     </#if>
+
+
 
     <#if !isCurrentUser>
         <#if isSubscriber>
