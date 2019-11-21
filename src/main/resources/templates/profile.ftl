@@ -2,8 +2,8 @@
 <#include "parts/navbar.ftl">
 <@cmn.page>
     <h3>${username}</h3>
-    <#if user.filename>
-        <img src="/img/${user.filename}">
+    <#if filename??>
+        <img src="/img/${filename}" style="width: 250px; height: 250px;">
     </#if>
 
 

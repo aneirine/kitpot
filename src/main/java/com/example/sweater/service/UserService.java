@@ -110,7 +110,7 @@ public class UserService implements UserDetailsService {
         repository.deleteById(user.getId());
     }
 
-    public void updateProfile(User user, String password, String email) {
+    public void updateProfile(User user, String password, String email, String filename) {
         String userEmail = user.getEmail();
 
         boolean isEmailChanged = (email != null && !email.equals(userEmail)) ||
@@ -127,6 +127,8 @@ public class UserService implements UserDetailsService {
         if (!StringUtils.isEmpty(password)) {
             user.setPassword(password);
         }
+
+        user.setFilename(filename);
 
         repository.save(user);
         if (isEmailChanged) {

@@ -2,10 +2,10 @@ package com.example.sweater.controller;
 
 import com.example.sweater.domain.Role;
 import com.example.sweater.domain.User;
-import com.example.sweater.repository.MessageRepository;
 import com.example.sweater.repository.UserRepository;
 import com.example.sweater.service.UserService;
 import com.example.sweater.utils.ControllerUtils;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -18,7 +18,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;
-import java.util.UUID;
 
 @Controller
 @RequestMapping("/user")
@@ -30,7 +29,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
-    @Value("${upload.users.path}")
+    @Value("${upload.path}")
     private String path;
 
 
@@ -78,6 +77,8 @@ public class UserController {
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());
 
+        model.addAttribute("filename", user.getFilename());
+
         model.addAttribute("id", user.getId());
 
         model.addAttribute("currentSubscribers", user.getSubscribers().size());
@@ -99,7 +100,8 @@ public class UserController {
                                  Model model) {
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());
-        model.addAttribute("image_url", "logo_pink_small.png");
+        model.addAttribute("image_url", user.getFilename());
+        //  model.addAttribute("image_url", "logo_pink_small.png");
 
 
         //public/img/
@@ -107,22 +109,26 @@ public class UserController {
 
     }
 
+    private static final String TAG = "UserController";
+
     @PostMapping("profileEdit")
     public String updateProfile(@AuthenticationPrincipal User user,
                                 @RequestParam String password,
                                 @RequestParam String email,
                                 @RequestParam("file") MultipartFile file) throws IOException {
 
+        String resultName = "";
         if (file != null) {
+            System.out.println("ITS NOT NULL");
             File uploadDir = new File(path);
             if (!uploadDir.exists()) uploadDir.mkdir();
-            String resultName = ControllerUtils.UUIDFileName(file.getOriginalFilename());
-            file.transferTo(new File(resultName));
-            user.setFilename(resultName);
+            resultName = ControllerUtils.UUIDFileName(file.getOriginalFilename());
+            file.transferTo(new File(path + "/" + resultName));
+            //user.setFilename(resultName);
         }
 
         try {
-            userService.updateProfile(user, password, email);
+            userService.updateProfile(user, password, email, resultName);
         } catch (Exception e) {
             e.printStackTrace();
         }

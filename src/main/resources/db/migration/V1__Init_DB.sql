@@ -16,6 +16,7 @@ create table user_role (
 
 create table usr (
     id int8 not null,
+    filename varchar(255),
     activation_code varchar(255),
     active boolean not null,
     email varchar(255),

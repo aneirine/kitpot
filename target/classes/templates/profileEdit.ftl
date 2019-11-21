@@ -7,7 +7,7 @@
     <h3>${username}</h3>
     ${message?ifExists}
 
-    <form method="post" xmlns="http://www.w3.org/1999/html">
+    <form method="post" xmlns="http://www.w3.org/1999/html"  enctype="multipart/form-data">
 
 
         <div class="form-group row">
@@ -27,7 +27,7 @@
         </div>
 
 
-        <input type="file" name="image" id="image" onchange="readURL(this);"/>
+        <input type="file" name="file" id="image" onchange="readURL(this);"/>
         <div class="image_container">
             <#if image_url??>
                 <img id="blah" class="card-img" src="/img/${image_url}" style="width:250px; height:250px;">

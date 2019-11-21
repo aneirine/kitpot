@@ -12,6 +12,7 @@ public class MvcConfig implements WebMvcConfigurer {
     private String uploadPath;
 
 
+
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/login").setViewName("login");
     }
@@ -21,6 +22,7 @@ public class MvcConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/uploads/**")
                 .addResourceLocations("file://" + uploadPath + "/");
+
         registry.addResourceHandler("/public/**")
                 .addResourceLocations("classpath:/public/");
         registry
