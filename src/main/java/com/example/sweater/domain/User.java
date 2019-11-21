@@ -24,6 +24,7 @@ public class User implements UserDetails {
     @NotBlank(message = "Password cannot be empty")
     private String password;
 
+    private String filename;
 
     private boolean active;
 
@@ -163,6 +164,14 @@ public class User implements UserDetails {
 
     public void setSubscriptions(Set<User> subscriptions) {
         this.subscriptions = subscriptions;
+    }
+
+    public String getFilename() {
+        return filename;
+    }
+
+    public void setFilename(String filename) {
+        this.filename = filename;
     }
 
     @Override
