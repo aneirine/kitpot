@@ -5,7 +5,6 @@ import com.example.sweater.domain.User;
 import com.example.sweater.repository.UserRepository;
 import com.example.sweater.service.UserService;
 import com.example.sweater.utils.ControllerUtils;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -74,10 +73,12 @@ public class UserController {
     public String getProfile(@AuthenticationPrincipal User currentUser,
                              @PathVariable User user,
                              Model model) {
+
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());
 
         model.addAttribute("filename", user.getFilename());
+
 
         model.addAttribute("id", user.getId());
 
@@ -109,8 +110,6 @@ public class UserController {
 
     }
 
-    private static final String TAG = "UserController";
-
     @PostMapping("profileEdit")
     public String updateProfile(@AuthenticationPrincipal User user,
                                 @RequestParam String password,
@@ -124,7 +123,6 @@ public class UserController {
             if (!uploadDir.exists()) uploadDir.mkdir();
             resultName = ControllerUtils.UUIDFileName(file.getOriginalFilename());
             file.transferTo(new File(path + "/" + resultName));
-            //user.setFilename(resultName);
         }
 
         try {

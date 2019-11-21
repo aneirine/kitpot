@@ -7,7 +7,7 @@
     <h3>${username}</h3>
     ${message?ifExists}
 
-    <form method="post" xmlns="http://www.w3.org/1999/html"  enctype="multipart/form-data">
+    <form method="post" xmlns="http://www.w3.org/1999/html" enctype="multipart/form-data">
 
 
         <div class="form-group row">
@@ -27,7 +27,8 @@
         </div>
 
 
-        <input type="file" name="file" id="image" onchange="readURL(this);"/>
+        <input type="file" name="file" id="customFile" onchange="readURL(this);" />
+
         <div class="image_container">
             <#if image_url??>
                 <img id="blah" class="card-img" src="/img/${image_url}" style="width:250px; height:250px;">
@@ -36,11 +37,9 @@
 
         </div>
 
+
         <button id="crop_button" type="button">Crop</button>
 
-        <div class="cropped_result">
-            <img src="" id="cropped_image">
-        </div>
 
         <script type="text/javascript" defer>
             var cropper;
@@ -73,7 +72,7 @@
                     /* var cropped_image = document.getElementById('cropped_image');
 
                      cropped_image.src = */
-                   // readURL(cropper.getCroppedCanvas().toDataURL());
+                    // readURL(cropper.getCroppedCanvas().toDataURL());
 
 
                     var blah = document.getElementById('blah');
@@ -81,6 +80,7 @@
                     if (cropper != null) {
                         cropper.destroy();
                     }
+
                 });
 
             }
