@@ -110,17 +110,10 @@ public class UserService implements UserDetailsService {
         repository.deleteById(user.getId());
     }
 
-    public void updateProfile(User user, User newUser) {
+    public void updateProfile(User user, String password, String email, String filename) {
         String userEmail = user.getEmail();
 
-        String newEmail = newUser.getEmail();
-
-        boolean isEmailChanged = (!newEmail.equals(userEmail)) || (!userEmail.equals(newEmail));
-        if(isEmailChanged) newUser.setActivationCode(UUID.randomUUID().toString());
-
-
-
-      /*  boolean isEmailChanged = (email != null && !email.equals(userEmail)) ||
+        boolean isEmailChanged = (email != null && !email.equals(userEmail)) ||
                 (userEmail != null && !userEmail.equals(email));
 
         if (isEmailChanged) {
@@ -135,11 +128,11 @@ public class UserService implements UserDetailsService {
             user.setPassword(password);
         }
 
-        user.setFilename(filename);*/
+        user.setFilename(filename);
 
-        repository.save(newUser);
+        repository.save(user);
         if (isEmailChanged) {
-            sendMessage(newUser);
+            sendMessage(user);
         }
 
     }

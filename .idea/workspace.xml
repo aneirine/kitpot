@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b0fdaa3-194e-4e30-9865-d6dce426a295" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/uploads/69368633-f51d-4c9f-ba44-8b1e0b51a3fe.astri-lohne-sjursen-puppet-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/81f70b63-c6cd-4ba7-bee3-61ef9e3760f9.izverzhenie_lava_vulkan_sakura_derevo_45542_1920x1080.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/82873414-0d68-4150-9c0e-190b689bea36.astri-lohne-sciencefantasy-logo-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/9c92ec58-48a6-415e-b100-dab6c5d19b94.EFESxhD79TY.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/ab397358-7a18-40f2-8dde-7929b167c747.astri-lohne-sjursen-ellie.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/b17d1cec-4fa3-44b2-bb1a-52e2a5c49a48." afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/b68f556f-d09d-4bf9-9fda-f0adb0309ac4.C7D2Pb7GhT4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/b8d4ad8e-868d-49df-9da7-b47b1dd5b303.astri-lohne-sjursen-sesshomaru.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/d715661a-47e6-4c2c-9ae7-4c7178f0f53d.hpfmiD_sRW4.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profileEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profileEdit.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/profileEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/profileEdit.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -185,7 +176,12 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7cebd66f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -239,7 +235,7 @@
       <workItem from="1573058232999" duration="4373000" />
       <workItem from="1574342235280" duration="1378000" />
       <workItem from="1574428458253" duration="97000" />
-      <workItem from="1574678042590" duration="2331000" />
+      <workItem from="1574678042590" duration="3760000" />
     </task>
     <servers />
   </component>

@@ -35,8 +35,10 @@
             </div>
 
             <div class="image_container">
-                <#if image_url??>
-                    <img id="blah" class="card-img" src="/img/${image_url}" style="width:250px; height:250px;">
+
+
+                <#if filename??>
+                    <img id="blah" class="card-img" src="/img/${filename}" style="width:250px; height:250px;">
                 <#else>  <img id="blah" class="card-img" src="/img/lapka.png" style="width:250px; height:250px;">
                 </#if>
 

@@ -8,7 +8,10 @@ import com.example.sweater.utils.ControllerUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -100,26 +103,19 @@ public class UserController {
                                  Model model) {
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());
-
-
-       // model.addAttribute("image_url", user.getFilename());
-        //  model.addAttribute("image_url", "logo_pink_small.png");
-
-
-        //public/img/
+        System.out.println(user.getFilename() + " ITS A FILENAME");
+        model.addAttribute("filename", user.getFilename());
         return "profileEdit";
 
     }
 
     @PostMapping("profileEdit")
     public String updateProfile(@AuthenticationPrincipal User user,
-                                @RequestParam String password,
-                                @RequestParam String email,
-                                @RequestParam("file") MultipartFile file) throws IOException {
+                                @RequestParam(required = false) String password,
+                                @RequestParam(required = false) String email,
+                                @RequestParam(required = false, value = "file") MultipartFile file) throws IOException {
 
-        User newUser = user;
-        newUser.setPassword(password);
-        newUser.setEmail(email);
+
         String resultName = "";
         if (file != null) {
             System.out.println("ITS NOT NULL");
@@ -127,13 +123,13 @@ public class UserController {
             if (!uploadDir.exists()) uploadDir.mkdir();
             resultName = ControllerUtils.UUIDFileName(file.getOriginalFilename());
             file.transferTo(new File(path + "/" + resultName));
-            newUser.setFilename(resultName);
         }
 
 
-
         try {
-            userService.updateProfile(user, newUser);
+            userService.updateProfile(user, password, email, resultName);
+            Authentication authentication = new UsernamePasswordAuthenticationToken(user, user.getPassword(), user.getAuthorities());
+            SecurityContextHolder.getContext().setAuthentication(authentication);
         } catch (Exception e) {
             e.printStackTrace();
         }
