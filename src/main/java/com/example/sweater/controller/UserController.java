@@ -79,7 +79,6 @@ public class UserController {
 
         model.addAttribute("filename", user.getFilename());
 
-
         model.addAttribute("id", user.getId());
 
         model.addAttribute("currentSubscribers", user.getSubscribers().size());
@@ -101,7 +100,9 @@ public class UserController {
                                  Model model) {
         model.addAttribute("username", user.getUsername());
         model.addAttribute("email", user.getEmail());
-        model.addAttribute("image_url", user.getFilename());
+
+
+       // model.addAttribute("image_url", user.getFilename());
         //  model.addAttribute("image_url", "logo_pink_small.png");
 
 
@@ -116,6 +117,9 @@ public class UserController {
                                 @RequestParam String email,
                                 @RequestParam("file") MultipartFile file) throws IOException {
 
+        User newUser = user;
+        newUser.setPassword(password);
+        newUser.setEmail(email);
         String resultName = "";
         if (file != null) {
             System.out.println("ITS NOT NULL");
@@ -123,10 +127,13 @@ public class UserController {
             if (!uploadDir.exists()) uploadDir.mkdir();
             resultName = ControllerUtils.UUIDFileName(file.getOriginalFilename());
             file.transferTo(new File(path + "/" + resultName));
+            newUser.setFilename(resultName);
         }
 
+
+
         try {
-            userService.updateProfile(user, password, email, resultName);
+            userService.updateProfile(user, newUser);
         } catch (Exception e) {
             e.printStackTrace();
         }
