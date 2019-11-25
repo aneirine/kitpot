@@ -115,7 +115,6 @@ public class UserController {
                                 @RequestParam(required = false) String email,
                                 @RequestParam(required = false, value = "file") MultipartFile file) throws IOException {
 
-
         String resultName = "";
         if (file != null) {
             System.out.println("ITS NOT NULL");
@@ -124,7 +123,6 @@ public class UserController {
             resultName = ControllerUtils.UUIDFileName(file.getOriginalFilename());
             file.transferTo(new File(path + "/" + resultName));
         }
-
 
         try {
             userService.updateProfile(user, password, email, resultName);
@@ -136,9 +134,6 @@ public class UserController {
         return "redirect:/user/profileEdit";
 
     }
-
-
-    //Subscribers and subscriptions
 
 
     @GetMapping("subscribe/{user}")

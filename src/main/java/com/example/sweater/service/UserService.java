@@ -111,6 +111,10 @@ public class UserService implements UserDetailsService {
     }
 
     public void updateProfile(User user, String password, String email, String filename) {
+        if(email.isEmpty() || email == null){
+            email = user.getEmail();
+        }
+
         String userEmail = user.getEmail();
 
         boolean isEmailChanged = (email != null && !email.equals(userEmail)) ||
