@@ -40,6 +40,10 @@ public class User implements UserDetails {
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<Message> messages;
 
+    private String filename;
+
+
+
     @ManyToMany
     @JoinTable(
             name = "user_subscriptions",
@@ -55,6 +59,14 @@ public class User implements UserDetails {
             inverseJoinColumns = {@JoinColumn(name = "channel_id")}
     )
     private Set<User> subscriptions = new HashSet<>();
+
+    public String getFilename() {
+        return filename;
+    }
+
+    public void setFilename(String filename) {
+        this.filename = filename;
+    }
 
     public Set<Message> getMessages() {
         return messages;

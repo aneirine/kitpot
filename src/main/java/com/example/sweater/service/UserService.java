@@ -106,24 +106,25 @@ public class UserService implements UserDetailsService {
         repository.deleteById(user.getId());
     }
 
-    public void updateProfile(User user, String password, String email) {
+    public void updateProfile(User user, String password, String email, String filename) {
+        if(email.isEmpty() || email == null){
+            email = user.getEmail();
+        }
+
         String userEmail = user.getEmail();
 
         boolean isEmailChanged = (email != null && !email.equals(userEmail)) ||
                 (userEmail != null && !userEmail.equals(email));
-
         if (isEmailChanged) {
             user.setEmail(email);
-
             if (!StringUtils.isEmpty(email)) {
                 user.setActivationCode(UUID.randomUUID().toString());
             }
         }
-
         if (!StringUtils.isEmpty(password)) {
             user.setPassword(password);
         }
-
+        user.setFilename(filename);
         repository.save(user);
         if (isEmailChanged) {
             sendMessage(user);

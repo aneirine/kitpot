@@ -4,6 +4,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 
 import java.util.Map;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class ControllerUtils {
@@ -15,5 +16,8 @@ public class ControllerUtils {
                 FieldError::getDefaultMessage
         ));
     }
-
+    static public String UUIDFileName(String fileName){
+        String uuid = UUID.randomUUID().toString();
+        return uuid + "." + fileName;
+    }
 }
