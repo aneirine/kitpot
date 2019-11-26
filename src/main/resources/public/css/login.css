@@ -7,7 +7,7 @@ html,
 body,
 .main {
     height: 100%;
-    background: url(../img/background.png);
+   /* background: url(../img/background.png);*/
     background-size: cover;
 
 }
@@ -32,8 +32,8 @@ body,
     border-radius: 10%;
     padding: 1em;
     width: 20em;
-    background: #fdcdd4;
-    background: #fdcdd4;
+    background: lightskyblue;/*#fdcdd4*/
+    background: lightskyblue;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 }
@@ -44,6 +44,7 @@ body,
     overflow: hidden;
 }
 
+/*
 #confirm {
     margin-top: 1em;
     width: 51px;
@@ -51,6 +52,7 @@ body,
     background: transparent url("../img/lapka.png") no-repeat 50% 50%;
     border: none;
 }
+*/
 
 button span {
     display: none;
@@ -58,7 +60,8 @@ button span {
 
 
 h3, a {
-    color: #808085;
+   /* color: #808085;*/
+    color: white;
 
 }
 

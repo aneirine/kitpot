@@ -2,18 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b0fdaa3-194e-4e30-9865-d6dce426a295" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/domain/dto/MessageDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V5__Add_message_likes.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/domain/dto/MessageDto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/domain/util/MessageHelper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/db/migration/V5__Add_message_likes.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/domain/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/controller/MessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/MessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/repository/MessageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sweater/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Add_admin.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Add_admin.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/img/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/message_list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/message_list.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/pager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/pager.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/common_login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/common_login.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profileEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profileEdit.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/MessageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/controller/MessageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/domain/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/domain/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/repository/MessageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/repository/MessageRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/sweater/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/sweater/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V2__Add_admin.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/migration/V2__Add_admin.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/public/img/background.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/message_list.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/message_list.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/common.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/pager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/pager.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/profile.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/profile.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/profileEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/profileEdit.ftl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,47 +52,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="kittenspoetry@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="kittenspoetry@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="kittenspoetry@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="kittenspoetry: database" type="162271b6:PgImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="kittenspoetry@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="kittenspoetry: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="kittenspoetry@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="kittenspoetry: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="kittenspoetry@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="kittenspoetry: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -244,7 +224,7 @@
       <workItem from="1573303879651" duration="481000" />
       <workItem from="1573724845926" duration="16000" />
       <workItem from="1574335422527" duration="1410000" />
-      <workItem from="1574686277874" duration="3742000" />
+      <workItem from="1574686277874" duration="7883000" />
     </task>
     <servers />
   </component>

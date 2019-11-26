@@ -57,7 +57,7 @@ public class MessageController {
 
             model.addAttribute("page", page);
             model.addAttribute("url", "/main");
-            model.addAttribute("filename", user.getFilename());
+            model.addAttribute("user_photo", user.getFilename());
             model.addAttribute("filter", filter);
 
             return "main";

@@ -9,10 +9,10 @@
 
         <nav class="navbar navbar-expand-lg">
 
-
-            <nav class="navbar">
-                <a class="navbar-brand" href="/">
-                    <img src="../public/img/logo_pink_small.png" width="30" height="40" alt="">
+           <nav class="navbar">
+                <a class="navbar-brand links" href="/">
+                    Main page
+                   <#-- <img src="../public/img/logo_pink_small.png" width="30" height="40" alt="">-->
                 </a>
             </nav>
 
@@ -25,7 +25,7 @@
                 <ul class="navbar-nav mr-auto">
 
                     <div class="form-row">
-                        <div class="form-group offset-md-1 ">
+                        <div class="form-group  ">
 
                             <div class="input-group">
 
@@ -50,8 +50,8 @@
                     <a class="navbar-brand links" href="/user/profile/${currentUserId}">
                         ${name}
                         <#--  <img src="../public/img/oval.png" class="offset-md-2 mr-3">-->
-                        <#if filename??>
-                            <img src="/img/${filename}" class="offset-md-2 mr-3" style="border-radius: 50%; width: 50px; height: 50px;">
+                        <#if user_photo??>
+                            <img src="/img/${user_photo}" class="offset-md-2 mr-3" style="border-radius: 50%; width: 50px; height: 50px;">
                         </#if>
 
                     </a>

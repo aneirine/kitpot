@@ -31,14 +31,14 @@
                     <a href="/deleteById/${message.id}">Delete</a>
 
 
-
-                    <a class="col align-self-center" href="#">
-                        <#if true>
+                  <#--  <a class="col align-self-center" href="#">
+                        <#if message.meLiked>
                             <i class="far fa-heart"></i>
                         <#else>
                             <i class="fas fa-heart"></i>
                         </#if>
-                    </a>
+                        ${message.likes}
+                    </a>-->
 
 
                     <#-- <#include "parts/message_edit.ftl" />-->

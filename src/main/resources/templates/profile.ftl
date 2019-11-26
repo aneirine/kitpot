@@ -14,7 +14,7 @@
 
 
 
-
+    <br/><br/>
     <#if !isCurrentUser>
         <#if isSubscriber>
             <a class="btn btn-info" href="/user/unsubscribe/${id}">Unsubscribe</a>

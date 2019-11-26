@@ -83,6 +83,7 @@ public class UserController {
         model.addAttribute("id", user.getId());
 
         model.addAttribute("filename", user.getFilename());
+        model.addAttribute("user_photo", currentUser.getFilename());
 
         model.addAttribute("currentSubscribers", user.getSubscribers().size());
         model.addAttribute("currentSubscriptions", user.getSubscriptions().size());

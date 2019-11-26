@@ -29,7 +29,7 @@
 
                             <div id="rectangle" class="offset-md-2">
 
-                                <div id="logo"></div>
+                               <#-- <div id="logo"></div>-->
 
                                 <div class="form-group">
 

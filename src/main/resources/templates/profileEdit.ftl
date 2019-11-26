@@ -39,7 +39,7 @@
                 <div class="image_container">
                     <#if filename??>
                         <img id="blah" class="card-img" src="/img/${filename}" style="width:250px; height:250px;">
-                    <#else>  <img id="blah" class="card-img" src="/img/lapka.png" style="width:250px; height:250px;">
+                    <#else>  <img id="blah" class="card-img" <#--src="/img/lapka.png"--> style="width:250px; height:250px;">
                     </#if>
                 </div>
                 <br/>
