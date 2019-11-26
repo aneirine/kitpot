@@ -18,6 +18,7 @@
                     <p><small class="text-muted">${message.tag}</small></p>
                     <p class="card-text">${message.id}</p>
 
+
                     <p class="card-text">
                         <small class="text-muted">
 
@@ -28,6 +29,16 @@
 
 
                     <a href="/deleteById/${message.id}">Delete</a>
+
+
+
+                    <a class="col align-self-center" href="#">
+                        <#if true>
+                            <i class="far fa-heart"></i>
+                        <#else>
+                            <i class="fas fa-heart"></i>
+                        </#if>
+                    </a>
 
 
                     <#-- <#include "parts/message_edit.ftl" />-->

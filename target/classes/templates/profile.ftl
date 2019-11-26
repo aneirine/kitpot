@@ -7,10 +7,8 @@
     </#if>
 
 
-
     <#if isCurrentUser>
-        <br/>
-        <br/>
+        <br/><br/>
         <a href="/user/profileEdit">Edit profile</a>
     </#if>
 

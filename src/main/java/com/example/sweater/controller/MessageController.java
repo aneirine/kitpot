@@ -21,7 +21,7 @@ import java.util.Map;
 
 
 @Controller
-public class MainController {
+public class MessageController {
 
     @Autowired
     private MessageRepository messageRepository;
