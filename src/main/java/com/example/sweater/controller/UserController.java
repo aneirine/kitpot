@@ -2,10 +2,8 @@ package com.example.sweater.controller;
 
 import com.example.sweater.domain.Role;
 import com.example.sweater.domain.User;
-import com.example.sweater.repository.MessageRepository;
 import com.example.sweater.repository.UserRepository;
 import com.example.sweater.service.UserService;
-
 import com.example.sweater.utils.ControllerUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

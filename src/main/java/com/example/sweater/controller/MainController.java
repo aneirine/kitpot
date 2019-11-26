@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
 import java.util.Map;
 
 
@@ -58,7 +57,9 @@ public class MainController {
 
             model.addAttribute("page", page);
             model.addAttribute("url", "/main");
+            model.addAttribute("filename", user.getFilename());
             model.addAttribute("filter", filter);
+
             return "main";
         }
 

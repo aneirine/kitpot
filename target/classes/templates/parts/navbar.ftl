@@ -16,9 +16,6 @@
                 </a>
             </nav>
 
-            <#--<button id="logo_btn"></button>-->
-
-
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,21 +33,11 @@
                                     <input type="text" name="filter" placeholder="Find"
                                            class="form-control"/>
                                     <#-- <button type="submit" class="btn btn-primary ml-2">Find</button>-->
-
                                 </form>
                             </div>
 
-
                         </div>
                     </div>
-
-
-                    <#--<#if user??>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/user/profile">Profile</a>
-                        </li>
-                    </#if>-->
-
 
                 </ul>
 
@@ -59,33 +46,17 @@
                 </#if>
 
 
-                <#--<div class="name-form">
-                    <div class="navbar-text mr-3">
-                        <a class="nav-link links" href="/user/profile"> ${name}</a>
-                    </div>
-                </div>
-
--->
-                <#--<nav class="navbar">
-                    <a class="navbar-brand links" href="/myMessages/${currentUserId}">
-                        My messages
-                        <img src="../public/img/oval.png" class="offset-md-2 mr-3">
-
-                    </a>
-                </nav>-->
-
-
                 <nav class="navbar">
                     <a class="navbar-brand links" href="/user/profile/${currentUserId}">
                         ${name}
-                        <img src="../public/img/oval.png" class="offset-md-2 mr-3">
+                        <#--  <img src="../public/img/oval.png" class="offset-md-2 mr-3">-->
+                        <#if filename??>
+                            <img src="/img/${filename}" class="offset-md-2 mr-3" style="border-radius: 50%; width: 50px; height: 50px;">
+                        </#if>
 
                     </a>
                 </nav>
 
-                <#-- <div class="user-image mr-3">
-                     <img src="../public/img/oval.png">
-                 </div>-->
 
                 <div class="mr-3">
                     <@lgn.logout />

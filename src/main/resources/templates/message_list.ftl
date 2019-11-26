@@ -15,7 +15,7 @@
 
                 <div class="card-body">
                     <span class="card-title">${message.text}</span>
-                    <i class="card-text">${message.tag}</i>
+                    <p><small class="text-muted">${message.tag}</small></p>
                     <p class="card-text">${message.id}</p>
 
                     <p class="card-text">

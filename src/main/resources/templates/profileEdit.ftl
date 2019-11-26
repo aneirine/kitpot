@@ -29,74 +29,63 @@
 
         <div class="form-group row">
 
-            <div class="col-sm-6">
+            <div class="col-sm-8">
                 <input type="file" name="file" id="customFile" onchange="readURL(this);"/>
                 <label class="custom-file-label" for="customFile">Choose File</label>
             </div>
 
-            <div class="image_container">
+            <br/><br/>
+            <div class="col-sm-8">
+                <div class="image_container">
+                    <#if filename??>
+                        <img id="blah" class="card-img" src="/img/${filename}" style="width:250px; height:250px;">
+                    <#else>  <img id="blah" class="card-img" src="/img/lapka.png" style="width:250px; height:250px;">
+                    </#if>
+                </div>
+                <br/>
+                <button id="crop_button" type="button" class="btn btn-light">Crop</button>
 
+                <script type="text/javascript" defer>
+                    var cropper;
 
-                <#if filename??>
-                    <img id="blah" class="card-img" src="/img/${filename}" style="width:250px; height:250px;">
-                <#else>  <img id="blah" class="card-img" src="/img/lapka.png" style="width:250px; height:250px;">
-                </#if>
-
-            </div>
-
-
-            <button id="crop_button" type="button">Crop</button>
-
-            <script type="text/javascript" defer>
-                var cropper;
-                function readURL(input) {
-                    if (cropper != null) {
-                        cropper.destroy();
-                    }
-                    if (input.files && input.files[0]) {
-                        var reader = new FileReader();
-                        reader.onload = function (e) {
-                            $('#blah').attr('src', e.target.result)
-                        };
-                        reader.readAsDataURL(input.files[0]);
-                        setTimeout(initCropper, 1000);
-                    }
-                }
-                function initCropper() {
-                    var image = document.getElementById('blah');
-                    cropper = new Cropper(image, {
-                        aspectRatio: 1 / 1,
-                        crop: function (e) {
-                            console.log(e.detail.x);
-                            console.log(e.detail.y);
-                        }
-                    });
-                    document.getElementById('crop_button').addEventListener('click', function () {
-                        /* var cropped_image = document.getElementById('cropped_image');
-                         cropped_image.src = */
-                        // readURL(cropper.getCroppedCanvas().toDataURL());
-                        var blah = document.getElementById('blah');
-                        blah.src = cropper.getCroppedCanvas().toDataURL();
-                        var custom = document.getElementById('customFile');
-                        custom.files[0] = cropper.getCroppedCanvas().toDataURL();
+                    function readURL(input) {
                         if (cropper != null) {
                             cropper.destroy();
                         }
-                    });
-                }
-            </script>
+                        if (input.files && input.files[0]) {
+                            var reader = new FileReader();
+                            reader.onload = function (e) {
+                                $('#blah').attr('src', e.target.result)
+                            };
+                            reader.readAsDataURL(input.files[0]);
+                            setTimeout(initCropper, 1000);
+                        }
+                    }
+
+                    function initCropper() {
+                        var image = document.getElementById('blah');
+                        cropper = new Cropper(image, {
+                            aspectRatio: 1 / 1,
+                            crop: function (e) {
+                                console.log(e.detail.x);
+                                console.log(e.detail.y);
+                            }
+                        });
+                        document.getElementById('crop_button').addEventListener('click', function () {
+                            var blah = document.getElementById('blah');
+                            blah.src = cropper.getCroppedCanvas().toDataURL();
+
+                            if (cropper != null) {
+                                cropper.destroy();
+                            }
+                        });
+                    }
+                </script>
+            </div>
         </div>
 
 
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-        <br/><br/>
-        <br/><br/>
-        <br/><br/>
-        <br/><br/>
-        <br/><br/>
-        <br/><br/>
-        <br/><br/>
-        <br/><br/>
 
         <button class="btn btn-primary" type="submit">Save</button>
         <br/><br/>

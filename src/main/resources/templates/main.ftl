@@ -42,9 +42,9 @@
                     <button type="submit" class="list-group-item list-group-item-action">Show All Mine</button>
                 </form>
 
-                <li class="list-group-item">
+                <#--<li class="list-group-item">
                     Delete
-                </li>
+                </li>-->
 
 
             </ul>
